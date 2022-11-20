@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+html body {
+  background-color: #010922;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+}
+html body a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.container .ellipse-1 {
+  position: absolute;
+  top: 1rem;
+  filter: blur(1.9rem);
+}
+.container .ellipse-2 {
+  position: absolute;
+  z-index: 1;
+  left: 84.8rem;
+  filter: blur(4.3rem);
+}
+
+nav {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 47rem;
+  align-items: center;
+  padding-top: 6.4rem;
+  padding-left: 19.2rem;
+  padding-right: 19.5rem;
+}
+nav .name h1 {
+  font-size: 4rem;
+  font-family: "Roboto";
+  font-style: normal;
+}
+nav .link {
+  display: flex;
+  -moz-column-gap: 5.4rem;
+       column-gap: 5.4rem;
+  font-size: 1.2rem;
+}
+
+.nft {
+  display: flex;
+  padding-top: 3.5rem;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 10rem;
+       column-gap: 10rem;
+}
+.nft .content {
+  padding-left: 19.2rem;
+}
+.nft .content h1 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 7rem;
+  padding-bottom: 2.5rem;
+}
+.nft .content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+.nft .content .btn-1 {
+  background-color: #8B8ADA;
+  color: #fff;
+  padding: 1.5rem 4.8rem;
+  border-radius: 10rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nft .content .btn-2 {
+  background-color: #010922;
+  color: #fff;
+  padding: 1.5rem 4.8rem;
+  border-radius: 10rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #8CD0D0;
+  cursor: pointer;
+}
+.nft .image img {
+  width: 50rem;
+  margin-right: 17rem;
+}
+
+.company {
+  padding: 5rem 19.2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.company h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 3rem;
+  margin-left: -80rem;
+}
+.company .logo {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  opacity: 0.5;
+  border-radius: 12px;
+  background-color: #181242;
+  padding: 1rem 5rem 1rem 5rem;
+  align-items: center;
+}
+
+.analytics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+  padding-left: 19.5rem;
+  padding-right: 19.5rem;
+  gap: 10rem;
+}
+.analytics img {
+  width: 40rem;
+}
+.analytics .sales h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8CD0D0;
+}
+.analytics .sales h1 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5.5rem;
+  line-height: 7rem;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.analytics .sales p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.8rem;
+  padding-bottom: 2.5rem;
+}
+.analytics .sales .btn-3 {
+  background-color: #8B8ADA;
+  color: #fff;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  padding: 1rem 6rem;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  padding-top: 14rem;
+  padding-left: 19.2rem;
+  padding-right: 19.5rem;
+  justify-content: center;
+}
+.app .content h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 138%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8CD0D0;
+  padding-bottom: 1rem;
+}
+.app .content h1 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  text-transform: capitalize;
+  padding-bottom: 3rem;
+}
+.app .content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.8rem;
+  padding-bottom: 3rem;
+}
+.app .content .btn-4 {
+  background-color: #8CD0D0;
+  color: #fff;
+  border-radius: 100px;
+  padding: 1rem 5rem;
+  cursor: pointer;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.app img {
+  width: 43rem;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 13rem;
+  padding-bottom: 5rem;
+}
+.testimonials h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8CD0D0;
+  padding-bottom: 3rem;
+}
+.testimonials h1 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 7rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding-bottom: 15rem;
+}
+.testimonials .card {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .testimonials .card {
+    padding-left: 3.2rem;
+    gap: 1rem;
+  }
+}
+.testimonials .card .one {
+  position: relative;
+  width: 30rem;
+  height: 22rem;
+  background: #0C0D32;
+  border-radius: 16px;
+}
+.testimonials .card .one img {
+  position: absolute;
+  width: 15rem;
+  height: 13rem;
+  border-radius: 50%;
+  left: 7.5rem;
+  top: -6rem;
+  filter: grayscale(100%);
+}
+.testimonials .card .one h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 10rem;
+  padding-bottom: 1.3rem;
+}
+.testimonials .card .one p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+}
+.testimonials .card .two {
+  position: relative;
+  width: 30rem;
+  height: 22rem;
+  background: #0C0D32;
+  border-radius: 16px;
+}
+.testimonials .card .two img {
+  position: absolute;
+  width: 15rem;
+  height: 13rem;
+  border-radius: 50%;
+  left: 7.5rem;
+  top: -6rem;
+  filter: grayscale(100%);
+}
+.testimonials .card .two h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 10rem;
+  padding-bottom: 1.3rem;
+}
+.testimonials .card .two p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.testimonials .card .three {
+  position: relative;
+  width: 30rem;
+  background: #0C0D32;
+  border-radius: 16px;
+}
+.testimonials .card .three img {
+  position: absolute;
+  width: 15rem;
+  height: 13rem;
+  border-radius: 50%;
+  left: 7.5rem;
+  top: -6rem;
+  filter: grayscale(100%);
+}
+.testimonials .card .three h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 10rem;
+  padding-bottom: 1.3rem;
+}
+.testimonials .card .three p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.started {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+}
+.started .bg {
+  padding: 2rem 22rem 4rem;
+  border-radius: 1.9rem;
+  text-align: center;
+  background: linear-gradient(276.98deg, #8CD0D0 -15.83%, #8B8ADA 100%);
+}
+.started .bg h4 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  padding-top: 3.2rem;
+  padding-bottom: 4rem;
+}
+.started .bg h2 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 67px;
+  line-height: 70px;
+  padding-bottom: 4rem;
+}
+.started .bg button {
+  background-color: black;
+  color: #fff;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  border-radius: 10rem;
+  padding: 1rem 10rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  gap: 10rem;
+  padding-bottom: 3rem;
+}
+.footer h3 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+.footer a {
+  cursor: pointer;
+  line-height: 2rem;
+}
+.footer h5 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+}
+.footer h2 {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.2rem;
+  padding-bottom: 2rem;
+}
+.footer input {
+  padding: 1rem 4rem 1rem 1rem;
+  background-color: #0C0D32;
+  border-radius: 10rem;
+  border: #0C0D32;
+}
+.footer button {
+  background-color: #8B8ADA;
+  color: #fff;
+  padding: 0.7rem 2.3rem;
+  border-radius: 10rem;
+  margin-left: -3rem;
+  border: #8B8ADA;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+}/*# sourceMappingURL=style.css.map */
