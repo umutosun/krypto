@@ -7,10 +7,14 @@
 }
 $background-color:#010922;
 $tablet:768px;
+$mobile-s:425px;
 html{
     font-size: 10px;
     @media screen and(max-width: $tablet){
         font-size: 5px;
+    }
+    @media screen and(max-width: $mobile-s){
+        font-size: 10px;
     }
     body{
         background-color: $background-color;
@@ -41,6 +45,9 @@ html{
             width: 768px;
            }
         }
+        @media screen and(max-width: $mobile-s){
+            display: none;
+        }
     }
     .ellipse-2{
         position: absolute;
@@ -50,6 +57,9 @@ html{
         @media screen and(max-width: $tablet){
             left: 53rem;
             top: -50rem;
+        }
+        @media screen and(max-width: $mobile-s){
+            display: none;
         }
     }
 }
@@ -64,26 +74,53 @@ nav{
     padding-top: 6.4rem;
     padding-left: 19.2rem;
     padding-right: 19.5rem;
+    .icon{
+        display: none;
+        @media screen and(max-width: $mobile-s){
+            display: block;
+            padding-right: 1rem;
+        }
+    }
+    @media screen and(max-width: $mobile-s){
+        padding-left: 0rem;
+        padding-right: 0rem;
+        justify-content: space-between;
+        padding-top: 3.4rem;
+        gap: 0rem;
+    }
     .name{
         h1 {
          font-size:4rem;
          font-family: 'Roboto';
          font-style: normal;
+         @media screen and(max-width: $mobile-s){
+            font-size:2rem;
+         }
         }
         @media screen and(max-width: $tablet){
             padding-left: 5rem;
+        }
+        @media screen and(max-width: $mobile-s){
+            padding-left: 1rem;
         }
     }
     .link{
         display: flex;
         column-gap: 5.4rem;
         font-size: 1.2rem;
+        }
         @media screen and(max-width: $tablet){
             font-size: 1.7rem;
         }
-    }
-    
+        a{
+         @media screen and(max-width: $mobile-s){
+            display: none;
+            }
+        }
+      
 }
+    
+
 
 // nft
 .nft{
@@ -92,8 +129,16 @@ nav{
     justify-content: center;
     align-items: center;
     column-gap: 10rem;
+    @media screen and(max-width: $mobile-s){
+        column-gap: 0;
+        flex-direction: column;
+        text-align: center;
+    }
     .content{
          padding-left: 19.2rem;
+         @media screen and(max-width: $mobile-s){
+            padding-left: 1rem;
+         }
         h1{
             font-family: 'Outfit';
             font-style: normal;
@@ -101,6 +146,12 @@ nav{
             font-size: 7rem;
             line-height: 7rem;
             padding-bottom: 2.5rem;
+            @media screen and(max-width: $mobile-s){
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 4rem;
+            padding-bottom: 1.5rem;
+            }
         }
         p{
             font-family: 'Roboto';
@@ -125,7 +176,9 @@ nav{
             @media screen and(max-width: $tablet){
                 border: #8B8ADA;
             }
-            
+            @media screen and(max-width: $mobile-s){
+                margin-bottom: 1rem;
+            }
           }
           .btn-2{
             background-color: $background-color;
@@ -140,12 +193,19 @@ nav{
             text-transform: uppercase;
             border: 1px solid #8CD0D0;
             cursor: pointer;
+            @media screen and(max-width: $mobile-s){
+                margin-bottom: 3rem;
+            }
           }
     }
     .image{
         img{
         width: 50rem;
         margin-right: 17rem;
+        @media screen and(max-width: $mobile-s){
+            width: 25rem;
+            margin-right: 0rem;
+        }
     }
     
     }
@@ -161,6 +221,9 @@ nav{
     @media screen and(max-width: $tablet){
         padding: 5rem 27.2rem;
     }
+    @media screen and(max-width: $mobile-s){
+        padding: 0 3rem;
+    }
     h4{
         font-family: 'Outfit';
         font-style: normal;
@@ -170,6 +233,11 @@ nav{
         text-transform: uppercase;
         padding-bottom: 3rem;
         margin-left: -80rem;
+        @media screen and(max-width: $mobile-s){
+            margin-left: 0rem;
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+        }
     }
     .logo{
         display: flex;
@@ -186,6 +254,15 @@ nav{
             padding: .1rem;
          }
         }
+        @media screen and(max-width: $mobile-s){
+            padding: .5rem;
+            gap: 0rem;
+            justify-content: space-between;
+            img{
+            width: 90%;
+            padding: .1rem;
+            }
+        }
     }
 }
 
@@ -198,9 +275,20 @@ nav{
     padding-left: 19.5rem;
     padding-right: 19.5rem;
     gap: 10rem;
+    @media screen and(max-width: $mobile-s){
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 0;
+        gap: 0;
+    }
     img{
         width: 40rem;
+        @media screen and(max-width: $mobile-s){
+            order: 2;
+            width: 30rem;
+        }
     }
+   
     .sales{
         h4{
             font-family: 'Outfit';
@@ -211,6 +299,9 @@ nav{
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: #8CD0D0;
+            @media screen and(max-width: $mobile-s){
+                padding-bottom: 2rem;
+            }
         }
         h1{
             font-family: 'Outfit';
@@ -220,6 +311,12 @@ nav{
             line-height: 7rem;
             text-transform: capitalize;
             color: #FFFFFF;
+            @media screen and(max-width: $mobile-s){
+                font-size: 2.8rem;
+                line-height: 3.2rem;
+                text-align: center;
+                padding-bottom: 1rem;
+            }
         }
         p{
             font-family: 'Roboto';
@@ -228,6 +325,10 @@ nav{
             font-size: 1.3rem;
             line-height: 2.8rem;
             padding-bottom: 2.5rem;
+            @media screen and(max-width: $mobile-s){
+                font-size: .8rem;
+                line-height: 1rem;
+            }
         }
         .btn-3{
             background-color: #8B8ADA;
@@ -241,6 +342,13 @@ nav{
             text-transform: uppercase;
             border-radius: 10rem;
             padding: 1rem 6rem;
+            @media screen and(max-width: $mobile-s){
+                font-size: 1rem;
+                padding: .5rem 1.5rem;
+                border: #8B8ADA;
+                margin-bottom: 2rem;
+               
+            }
         }
     }
 
@@ -256,6 +364,13 @@ nav{
     padding-right: 19.5rem;
     justify-content: center;
     gap: 10rem;
+    @media screen and(max-width: $mobile-s){
+        flex-direction: column;
+        padding-top: 2rem;
+        text-align: center;
+        padding: 0;
+        gap: 2rem;
+    }
     .content{
         h4{
             font-family: 'Outfit';
@@ -276,6 +391,11 @@ nav{
             line-height: 5.5rem;
             text-transform: capitalize;
             padding-bottom: 3rem;
+            @media screen and(max-width: $mobile-s){
+                font-size: 3rem;
+                line-height: 4rem;
+                padding-bottom: 1rem;
+            }
         }
         p{
             font-family: 'Roboto';
@@ -284,6 +404,11 @@ nav{
             font-size: 1.2rem;
             line-height: 2.8rem;
             padding-bottom: 3rem;
+            @media screen and(max-width: $mobile-s){
+                font-size: .9rem;
+                line-height: 1.5rem;
+                padding-bottom: 1rem;
+            }
         }
         .btn-4{
             background-color: #8CD0D0;
@@ -295,11 +420,18 @@ nav{
             font-style: normal;
             font-weight: 600;
             font-size: 1.3rem;
+            @media screen and(max-width: $mobile-s){
+                padding: .5rem 2rem;
+                border: #8CD0D0;
+            }
     }
     
     }
     img{
         width: 43rem;
+        @media screen and(max-width: $mobile-s){
+            width: 30rem;
+        }
     }
 }
 
@@ -312,6 +444,9 @@ nav{
     text-align: center;
     padding-top: 13rem;
     padding-bottom: 5rem;
+    @media screen and(max-width: $mobile-s){
+        padding-top: 7rem;
+    }
     h4{
         font-family: 'Outfit';
         font-style: normal;
@@ -333,10 +468,21 @@ nav{
         text-transform: capitalize;
         color: #FFFFFF;
         padding-bottom: 15rem;
+        @media screen and(max-width: $mobile-s){
+            font-size: 4rem;
+            line-height: 7rem;
+            padding-bottom: 10rem;
+
+        }
     }
     .card{
         display: flex;
         gap: 2rem;
+        @media screen and(max-width: $mobile-s){
+            flex-direction: column;
+            gap: 10rem;
+           
+        }
         .one{
             position: relative;
             width: 30rem;
@@ -345,6 +491,10 @@ nav{
             border-radius: 16px;
             @media screen and(max-width: $tablet){
                 height: 37rem;
+            }
+            @media screen and(max-width: $mobile-s){
+                width: 30rem;
+                
             }
             img{
                 position: absolute;
@@ -477,11 +627,16 @@ nav{
     text-align: center;
     padding-top: 7rem;
     padding-bottom: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     .bg{
         padding: 2rem 22rem 4rem;
         border-radius: 1.9rem;
         text-align: center;
         background: linear-gradient(276.98deg, #8CD0D0 -15.83%, #8B8ADA 100%);
+        @media screen and(max-width: $mobile-s){
+          padding: 0;
+        }
     h4{
         font-family: 'Outfit';
         font-style: normal;
@@ -490,6 +645,10 @@ nav{
         line-height: 2.8rem;
         padding-top: 3.2rem;
         padding-bottom: 4rem;
+        @media screen and(max-width: $mobile-s){
+            font-size: 1.5rem;
+            padding-bottom: 2rem;
+        }
     }
     h2{
         font-family: 'Outfit';
@@ -498,8 +657,10 @@ nav{
         font-size: 6.7rem;
         line-height: 7rem;
         padding-bottom: 4rem;
-        @media screen and(max-width: $tablet){
-
+        @media screen and(max-width: $mobile-s){
+            font-size: 3.7rem;
+            line-height: 5rem;
+            padding-bottom: 2rem;
         }
     }
     button{
@@ -511,6 +672,10 @@ nav{
         font-size: 2rem;
         border-radius: 10rem;
         padding: 1rem 10rem;
+        @media screen and(max-width: $mobile-s){
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+        }
     }
    }
 }
@@ -524,13 +689,21 @@ nav{
     padding-bottom: 3rem;
     @media screen and(max-width: $tablet){
       gap: 6rem;
-    
+    }
+    @media screen and(max-width: $mobile-s){
+        flex-direction: column;
+        padding-left: 3rem;
+        gap: 2rem;
+        padding-top: 1rem;
     }
     h3{
         font-family: 'Outfit';
         font-style: normal;
         font-weight: 600;
         font-size: 2.2rem;
+        @media screen and(max-width: $mobile-s){
+            display: none;
+        }
     }
     a{
         cursor: pointer;
@@ -543,6 +716,7 @@ nav{
         font-size: 1.6rem;
         line-height: 2rem;
         padding-bottom: 1rem;
+       
     }
     h2{
         font-family: 'Outfit';
