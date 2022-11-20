@@ -9,6 +9,11 @@
 html {
   font-size: 10px;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 5px;
+  }
+}
 html body {
   background-color: #010922;
   height: 100vh;
@@ -32,11 +37,25 @@ html body a {
   top: 1rem;
   filter: blur(1.9rem);
 }
+@media screen and (max-width: 768px) {
+  .container .ellipse-1 {
+    left: 0;
+  }
+  .container .ellipse-1 svg {
+    width: 768px;
+  }
+}
 .container .ellipse-2 {
   position: absolute;
   z-index: 1;
   left: 84.8rem;
   filter: blur(4.3rem);
+}
+@media screen and (max-width: 768px) {
+  .container .ellipse-2 {
+    left: 53rem;
+    top: -50rem;
+  }
 }
 
 nav {
@@ -54,11 +73,21 @@ nav .name h1 {
   font-family: "Roboto";
   font-style: normal;
 }
+@media screen and (max-width: 768px) {
+  nav .name {
+    padding-left: 5rem;
+  }
+}
 nav .link {
   display: flex;
   -moz-column-gap: 5.4rem;
        column-gap: 5.4rem;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 768px) {
+  nav .link {
+    font-size: 1.7rem;
+  }
 }
 
 .nft {
@@ -101,6 +130,11 @@ nav .link {
   text-transform: uppercase;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .nft .content .btn-1 {
+    border: #8B8ADA;
+  }
+}
 .nft .content .btn-2 {
   background-color: #010922;
   color: #fff;
@@ -127,6 +161,11 @@ nav .link {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .company {
+    padding: 5rem 27.2rem;
+  }
+}
 .company h4 {
   font-family: "Outfit";
   font-style: normal;
@@ -146,6 +185,12 @@ nav .link {
   background-color: #181242;
   padding: 1rem 5rem 1rem 5rem;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .company .logo img {
+    width: 100%;
+    padding: 0.1rem;
+  }
 }
 
 .analytics {
@@ -208,6 +253,7 @@ nav .link {
   padding-left: 19.2rem;
   padding-right: 19.5rem;
   justify-content: center;
+  gap: 10rem;
 }
 .app .content h4 {
   font-family: "Outfit";
@@ -287,18 +333,17 @@ nav .link {
   display: flex;
   gap: 2rem;
 }
-@media screen and (max-width: 768px) {
-  .testimonials .card {
-    padding-left: 3.2rem;
-    gap: 1rem;
-  }
-}
 .testimonials .card .one {
   position: relative;
   width: 30rem;
   height: 22rem;
   background: #0C0D32;
   border-radius: 16px;
+}
+@media screen and (max-width: 768px) {
+  .testimonials .card .one {
+    height: 37rem;
+  }
 }
 .testimonials .card .one img {
   position: absolute;
@@ -329,12 +374,24 @@ nav .link {
   line-height: 2rem;
   color: #FFFFFF;
 }
+@media screen and (max-width: 768px) {
+  .testimonials .card .one p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    padding: 0rem 1rem;
+  }
+}
 .testimonials .card .two {
   position: relative;
   width: 30rem;
   height: 22rem;
   background: #0C0D32;
   border-radius: 16px;
+}
+@media screen and (max-width: 768px) {
+  .testimonials .card .two {
+    height: 37rem;
+  }
 }
 .testimonials .card .two img {
   position: absolute;
@@ -349,8 +406,8 @@ nav .link {
   font-family: "Outfit";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 2rem;
+  line-height: 2.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -364,6 +421,13 @@ nav .link {
   font-size: 10px;
   line-height: 20px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .testimonials .card .two p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    padding: 0rem 1rem;
+  }
 }
 .testimonials .card .three {
   position: relative;
@@ -400,6 +464,13 @@ nav .link {
   line-height: 20px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 768px) {
+  .testimonials .card .three p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    padding: 0rem 1rem;
+  }
+}
 
 .started {
   display: flex;
@@ -429,8 +500,8 @@ nav .link {
   font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
-  font-size: 67px;
-  line-height: 70px;
+  font-size: 6.7rem;
+  line-height: 7rem;
   padding-bottom: 4rem;
 }
 .started .bg button {
@@ -450,6 +521,11 @@ nav .link {
   padding-top: 5rem;
   gap: 10rem;
   padding-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    gap: 6rem;
+  }
 }
 .footer h3 {
   font-family: "Outfit";
@@ -482,6 +558,11 @@ nav .link {
   border-radius: 10rem;
   border: #0C0D32;
 }
+@media screen and (max-width: 768px) {
+  .footer input {
+    padding: 0.5rem;
+  }
+}
 .footer button {
   background-color: #8B8ADA;
   color: #fff;
@@ -493,4 +574,9 @@ nav .link {
   font-style: normal;
   font-weight: 600;
   font-size: 1.6rem;
+}
+@media screen and (max-width: 768px) {
+  .footer button {
+    margin-left: -6rem;
+  }
 }/*# sourceMappingURL=style.css.map */
