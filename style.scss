@@ -635,7 +635,7 @@ nav{
         text-align: center;
         background: linear-gradient(276.98deg, #8CD0D0 -15.83%, #8B8ADA 100%);
         @media screen and(max-width: $mobile-s){
-          padding: 0;
+          padding: 0 2rem;
         }
     h4{
         font-family: 'Outfit';
@@ -692,7 +692,7 @@ nav{
     }
     @media screen and(max-width: $mobile-s){
         flex-direction: column;
-        padding-left: 3rem;
+        padding-left: 6rem;
         gap: 2rem;
         padding-top: 1rem;
     }
