@@ -1,759 +1,740 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
-$background-color:#010922;
-$tablet:768px;
-$mobile-s:425px;
-html{
+$background-color: #010922;
+$tablet: 768px;
+$mobile-s: 425px;
+html {
+  font-size: 10px;
+  @media screen and(max-width: $tablet) {
+    font-size: 5px;
+  }
+  @media screen and(max-width: $mobile-s) {
     font-size: 10px;
-    @media screen and(max-width: $tablet){
-        font-size: 5px;
+  }
+  body {
+    background-color: $background-color;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Roboto";
+      font-style: normal;
+      cursor: pointer;
     }
-    @media screen and(max-width: $mobile-s){
-        font-size: 10px;
-    }
-    body{
-        background-color: $background-color;
-        height: 100vh;
-        color: rgb(255, 255, 255);   
-     a{
-        text-decoration: none;
-        color: #fff;
-        font-family: 'Roboto';
-        font-style: normal;
-        cursor: pointer;
-     }
-    }
+  }
 }
 
 // container
-.container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    .ellipse-1{
-        position: absolute;
-        top: 1rem;
-        filter: blur(1.9rem);
-        @media screen and(max-width: $tablet){
-            left: 0;
-           svg{
-            width: 768px;
-           }
-        }
-        @media screen and(max-width: $mobile-s){
-            display: none;
-        }
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .ellipse-1 {
+    position: absolute;
+    top: 1rem;
+    filter: blur(1.9rem);
+    @media screen and(max-width: $tablet) {
+      left: 0;
+      svg {
+        width: 768px;
+      }
     }
-    .ellipse-2{
-        position: absolute;
-        z-index: 1;
-        left: 80.8rem;
-        filter: blur(4.3rem);
-        @media screen and(max-width: $tablet){
-            left: 53rem;
-            top: -50rem;
-        }
-        @media screen and(max-width: $mobile-s){
-            display: none;
-        }
+    @media screen and(max-width: $mobile-s) {
+      display: none;
     }
+  }
+  .ellipse-2 {
+    position: absolute;
+    z-index: 1;
+    left: 80.8rem;
+    filter: blur(4.3rem);
+    @media screen and(max-width: $tablet) {
+      left: 53rem;
+      top: -50rem;
+    }
+    @media screen and(max-width: $mobile-s) {
+      display: none;
+    }
+  }
 }
 
 // navbar
-nav{
-    margin: 0;
+nav {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 47rem;
+  align-items: center;
+  padding-top: 6.4rem;
+  padding-left: 19.2rem;
+  padding-right: 19.5rem;
+  .icon {
+    display: none;
+    @media screen and(max-width: $mobile-s) {
+      display: block;
+      padding-right: 1rem;
+    }
+  }
+  @media screen and(max-width: $mobile-s) {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    justify-content: space-between;
+    padding-top: 3.4rem;
+    gap: 0rem;
+  }
+  .name {
+    h1 {
+      font-size: 4rem;
+      font-family: "Roboto";
+      font-style: normal;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 2rem;
+      }
+    }
+    @media screen and(max-width: $tablet) {
+      padding-left: 5rem;
+    }
+    @media screen and(max-width: $mobile-s) {
+      padding-left: 1rem;
+    }
+  }
+  .link {
     display: flex;
-    justify-content: center;
-    gap: 47rem;
-    align-items: center;
-    padding-top: 6.4rem;
-    padding-left: 19.2rem;
-    padding-right: 19.5rem;
-    .icon{
-        display: none;
-        @media screen and(max-width: $mobile-s){
-            display: block;
-            padding-right: 1rem;
-        }
+    column-gap: 5.4rem;
+    font-size: 1.2rem;
+  }
+  @media screen and(max-width: $tablet) {
+    font-size: 1.7rem;
+  }
+  a {
+    @media screen and(max-width: $mobile-s) {
+      display: none;
     }
-    @media screen and(max-width: $mobile-s){
-        padding-left: 0rem;
-        padding-right: 0rem;
-        justify-content: space-between;
-        padding-top: 3.4rem;
-        gap: 0rem;
-    }
-    .name{
-        h1 {
-         font-size:4rem;
-         font-family: 'Roboto';
-         font-style: normal;
-         @media screen and(max-width: $mobile-s){
-            font-size:2rem;
-         }
-        }
-        @media screen and(max-width: $tablet){
-            padding-left: 5rem;
-        }
-        @media screen and(max-width: $mobile-s){
-            padding-left: 1rem;
-        }
-    }
-    .link{
-        display: flex;
-        column-gap: 5.4rem;
-        font-size: 1.2rem;
-        }
-        @media screen and(max-width: $tablet){
-            font-size: 1.7rem;
-        }
-        a{
-         @media screen and(max-width: $mobile-s){
-            display: none;
-            }
-        }
-      
+  }
 }
-    
-
 
 // nft
-.nft{
-    display: flex;
-    padding-top: 3.5rem;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10rem;
-    @media screen and(max-width: $mobile-s){
-        column-gap: 0;
-        flex-direction: column;
-        text-align: center;
+.nft {
+  display: flex;
+  padding-top: 3.5rem;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10rem;
+  @media screen and(max-width: $mobile-s) {
+    column-gap: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .content {
+    padding-left: 19.2rem;
+    @media screen and(max-width: $mobile-s) {
+      padding-left: 1rem;
     }
-    .content{
-         padding-left: 19.2rem;
-         @media screen and(max-width: $mobile-s){
-            padding-left: 1rem;
-         }
-        h1{
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 7rem;
-            line-height: 7rem;
-            padding-bottom: 2.5rem;
-            @media screen and(max-width: $mobile-s){
-            font-weight: 700;
-            font-size: 4rem;
-            line-height: 4rem;
-            padding-bottom: 1.5rem;
-            }
-        }
-        p{
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 1.3rem;
-            line-height: 1.5rem;
-            padding-bottom: 2.5rem;
-        }
-        .btn-1{
-            background-color: #8B8ADA;
-            color: #fff;
-            padding: 1.5rem 4.8rem;
-            border-radius: 10rem;
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.3rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            cursor: pointer;
-            @media screen and(max-width: $tablet){
-                border: #8B8ADA;
-            }
-            @media screen and(max-width: $mobile-s){
-                margin-bottom: 1rem;
-            }
-          }
-          .btn-2{
-            background-color: $background-color;
-            color: #fff;
-            padding: 1.5rem 4.8rem;
-            border-radius: 10rem;
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.3rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border: 1px solid #8CD0D0;
-            cursor: pointer;
-            @media screen and(max-width: $mobile-s){
-                margin-bottom: 3rem;
-            }
-          }
+    h1 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 7rem;
+      line-height: 7rem;
+      padding-bottom: 2.5rem;
+      @media screen and(max-width: $mobile-s) {
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 4rem;
+        padding-bottom: 1.5rem;
+      }
     }
-    .image{
-        img{
-        width: 50rem;
-        margin-right: 17rem;
-        @media screen and(max-width: $mobile-s){
-            width: 25rem;
-            margin-right: 0rem;
-        }
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      padding-bottom: 2.5rem;
     }
-    
+    .btn-1 {
+      background-color: #8b8ada;
+      color: #fff;
+      padding: 1.5rem 4.8rem;
+      border-radius: 10rem;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      @media screen and(max-width: $tablet) {
+        border: #8b8ada;
+      }
+      @media screen and(max-width: $mobile-s) {
+        margin-bottom: 1rem;
+      }
     }
+    .btn-2 {
+      background-color: $background-color;
+      color: #fff;
+      padding: 1.5rem 4.8rem;
+      border-radius: 10rem;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid #8cd0d0;
+      cursor: pointer;
+      @media screen and(max-width: $mobile-s) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .image {
+    img {
+      width: 50rem;
+      margin-right: 17rem;
+      @media screen and(max-width: $mobile-s) {
+        width: 25rem;
+        margin-right: 0rem;
+      }
+    }
+  }
 }
 
 // company
-.company{
-    padding: 5rem 19.2rem;
+.company {
+  padding: 5rem 19.2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @media screen and(max-width: $tablet) {
+    padding: 5rem 27.2rem;
+  }
+  @media screen and(max-width: $mobile-s) {
+    padding: 0 3rem;
+  }
+  h4 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+    margin-left: -80rem;
+    @media screen and(max-width: $mobile-s) {
+      margin-left: 0rem;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
+  }
+  .logo {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    gap: 5rem;
+    opacity: 0.5;
+    border-radius: 12px;
+    background-color: #181242;
+    padding: 1rem 5rem 1rem 5rem;
     align-items: center;
-    @media screen and(max-width: $tablet){
-        padding: 5rem 27.2rem;
+    @media screen and(max-width: $tablet) {
+      img {
+        width: 100%;
+        padding: 0.1rem;
+      }
     }
-    @media screen and(max-width: $mobile-s){
-        padding: 0 3rem;
+    @media screen and(max-width: $mobile-s) {
+      padding: 0.5rem;
+      gap: 0rem;
+      justify-content: space-between;
+      img {
+        width: 90%;
+        padding: 0.1rem;
+      }
     }
-    h4{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.2rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        padding-bottom: 3rem;
-        margin-left: -80rem;
-        @media screen and(max-width: $mobile-s){
-            margin-left: 0rem;
-            padding-top: 4rem;
-            padding-bottom: 2rem;
-        }
-    }
-    .logo{
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-        opacity: 0.5;
-        border-radius: 12px;
-        background-color: #181242;
-        padding: 1rem 5rem 1rem 5rem;
-        align-items: center;
-        @media screen and(max-width: $tablet){
-         img{
-            width: 100%;
-            padding: .1rem;
-         }
-        }
-        @media screen and(max-width: $mobile-s){
-            padding: .5rem;
-            gap: 0rem;
-            justify-content: space-between;
-            img{
-            width: 90%;
-            padding: .1rem;
-            }
-        }
-    }
+  }
 }
 
 // analytics
-.analytics{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 7rem;
-    padding-left: 19.5rem;
-    padding-right: 19.5rem;
-    gap: 10rem;
-    @media screen and(max-width: $mobile-s){
-        flex-direction: column;
+.analytics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+  padding-left: 19.5rem;
+  padding-right: 19.5rem;
+  gap: 10rem;
+  @media screen and(max-width: $mobile-s) {
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 0;
+    gap: 0;
+  }
+  img {
+    width: 40rem;
+    @media screen and(max-width: $mobile-s) {
+      order: 2;
+      width: 30rem;
+    }
+  }
+
+  .sales {
+    h4 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8cd0d0;
+      @media screen and(max-width: $mobile-s) {
+        padding-bottom: 2rem;
+      }
+    }
+    h1 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 5.5rem;
+      line-height: 7rem;
+      text-transform: capitalize;
+      color: #ffffff;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
         text-align: center;
-        padding: 5rem 0;
-        gap: 0;
+        padding-bottom: 1rem;
+      }
     }
-    img{
-        width: 40rem;
-        @media screen and(max-width: $mobile-s){
-            order: 2;
-            width: 30rem;
-        }
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.3rem;
+      line-height: 2.8rem;
+      padding-bottom: 2.5rem;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 0.8rem;
+        line-height: 1rem;
+      }
     }
-   
-    .sales{
-        h4{
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.6rem;
-            line-height: 2.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #8CD0D0;
-            @media screen and(max-width: $mobile-s){
-                padding-bottom: 2rem;
-            }
-        }
-        h1{
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 5.5rem;
-            line-height: 7rem;
-            text-transform: capitalize;
-            color: #FFFFFF;
-            @media screen and(max-width: $mobile-s){
-                font-size: 2.8rem;
-                line-height: 3.2rem;
-                text-align: center;
-                padding-bottom: 1rem;
-            }
-        }
-        p{
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 1.3rem;
-            line-height: 2.8rem;
-            padding-bottom: 2.5rem;
-            @media screen and(max-width: $mobile-s){
-                font-size: .8rem;
-                line-height: 1rem;
-            }
-        }
-        .btn-3{
-            background-color: #8B8ADA;
-            color: #fff;
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.5rem;
-            line-height: 2.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border-radius: 10rem;
-            padding: 1rem 6rem;
-            @media screen and(max-width: $mobile-s){
-                font-size: 1rem;
-                padding: .5rem 1.5rem;
-                border: #8B8ADA;
-                margin-bottom: 2rem;
-               
-            }
-        }
+    .btn-3 {
+      background-color: #8b8ada;
+      color: #fff;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 10rem;
+      padding: 1rem 6rem;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        border: #8b8ada;
+        margin-bottom: 2rem;
+      }
     }
-
-
+  }
 }
 
 // app
-.app{
-    display: flex;
-    align-items: center;
-    padding-top: 14rem;
-    padding-left: 19.2rem;
-    padding-right: 19.5rem;
-    justify-content: center;
-    gap: 10rem;
-    @media screen and(max-width: $mobile-s){
-        flex-direction: column;
-        padding-top: 2rem;
-        text-align: center;
-        padding: 0;
-        gap: 2rem;
+.app {
+  display: flex;
+  align-items: center;
+  padding-top: 14rem;
+  padding-left: 19.2rem;
+  padding-right: 19.5rem;
+  justify-content: center;
+  gap: 10rem;
+  @media screen and(max-width: $mobile-s) {
+    flex-direction: column;
+    padding-top: 2rem;
+    text-align: center;
+    padding: 0;
+    gap: 2rem;
+  }
+  .content {
+    h4 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 138%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8cd0d0;
+      padding-bottom: 1rem;
     }
-    .content{
-        h4{
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.5rem;
-            line-height: 138%;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #8CD0D0;
-            padding-bottom: 1rem;
-        }
-        h1{
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 5rem;
-            line-height: 5.5rem;
-            text-transform: capitalize;
-            padding-bottom: 3rem;
-            @media screen and(max-width: $mobile-s){
-                font-size: 3rem;
-                line-height: 4rem;
-                padding-bottom: 1rem;
-            }
-        }
-        p{
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 1.2rem;
-            line-height: 2.8rem;
-            padding-bottom: 3rem;
-            @media screen and(max-width: $mobile-s){
-                font-size: .9rem;
-                line-height: 1.5rem;
-                padding-bottom: 1rem;
-            }
-        }
-        .btn-4{
-            background-color: #8CD0D0;
-            color: #fff;
-            border-radius: 100px;
-            padding: 1rem 5rem;
-            cursor: pointer;
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.3rem;
-            @media screen and(max-width: $mobile-s){
-                padding: .5rem 2rem;
-                border: #8CD0D0;
-            }
+    h1 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 5rem;
+      line-height: 5.5rem;
+      text-transform: capitalize;
+      padding-bottom: 3rem;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 3rem;
+        line-height: 4rem;
+        padding-bottom: 1rem;
+      }
     }
-    
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 2.8rem;
+      padding-bottom: 3rem;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+      }
     }
-    img{
-        width: 43rem;
-        @media screen and(max-width: $mobile-s){
-            width: 30rem;
-        }
+    .btn-4 {
+      background-color: #8cd0d0;
+      color: #fff;
+      border-radius: 100px;
+      padding: 1rem 5rem;
+      cursor: pointer;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.3rem;
+      @media screen and(max-width: $mobile-s) {
+        padding: 0.5rem 2rem;
+        border: #8cd0d0;
+      }
     }
+  }
+  img {
+    width: 43rem;
+    @media screen and(max-width: $mobile-s) {
+      width: 30rem;
+    }
+  }
 }
 
 // testimonials
-.testimonials{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 13rem;
-    padding-bottom: 5rem;
-    @media screen and(max-width: $mobile-s){
-        padding-top: 7rem;
-    }
-    h4{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.5rem;
-        line-height: 2.8rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #8CD0D0;
-        padding-bottom: 3rem;
-    }
-    h1{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 5rem;
-        line-height: 7rem;
-        text-align: center;
-        text-transform: capitalize;
-        color: #FFFFFF;
-        padding-bottom: 15rem;
-        @media screen and(max-width: $mobile-s){
-            font-size: 4rem;
-            line-height: 7rem;
-            padding-bottom: 10rem;
-
-        }
-    }
-    .card{
-        display: flex;
-        gap: 2rem;
-        @media screen and(max-width: $mobile-s){
-            flex-direction: column;
-            gap: 10rem;
-           
-        }
-        .one{
-            position: relative;
-            width: 30rem;
-            height: 22rem;
-            background: #0C0D32;
-            border-radius: 16px;
-            @media screen and(max-width: $tablet){
-                height: 37rem;
-            }
-            @media screen and(max-width: $mobile-s){
-                width: 30rem;
-                
-            }
-            img{
-                position: absolute;
-                width: 15rem;
-                height: 13rem;
-                border-radius: 50%;
-                left: 7.5rem;
-                top: -6rem;
-                filter: grayscale(100%);
-            }
-            h4{
-                font-family: 'Outfit';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 2rem;
-                line-height: 2.8rem;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                padding-top: 10rem;
-                padding-bottom: 1.3rem;
-            }
-            p{
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 2rem;
-                color: #FFFFFF;
-                @media screen and(max-width: $tablet){
-                    font-size: 2rem;
-                    line-height: 3.5rem;
-                    padding:0rem 1rem ;
-                }
-            }
-        }
-        .two{
-            position: relative;
-            width: 30rem;
-            height: 22rem;
-            background: #0C0D32;
-            border-radius: 16px;
-            @media screen and(max-width: $tablet){
-                height: 37rem;
-            }
-            img{
-                position: absolute;
-                width: 15rem;
-                height: 13rem;
-                border-radius: 50%;
-                left: 7.5rem;
-                top: -6rem;
-                filter: grayscale(100%);
-            }
-            h4{
-                font-family: 'Outfit';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 2rem;
-                line-height: 2.8rem;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                padding-top: 10rem;
-                padding-bottom: 1.3rem;
-            }
-            p{
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 10px;
-                line-height: 20px;
-                color: #FFFFFF;
-                @media screen and(max-width: $tablet){
-                    font-size: 2rem;
-                    line-height: 3.5rem;
-                    padding:0rem 1rem ;
-                }
-            }
-        }
-        .three{
-            position: relative;
-            width: 30rem;
-            background: #0C0D32;
-            border-radius: 16px;
-            img{
-                position: absolute;
-                width: 15rem;
-                height: 13rem;
-                border-radius: 50%;
-                left: 7.5rem;
-                top: -6rem;
-                filter: grayscale(100%);
-            }
-            h4{
-                font-family: 'Outfit';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 2rem;
-                line-height: 2.8rem;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                padding-top: 10rem;
-                padding-bottom: 1.3rem;
-            }
-            p{
-                font-family: 'Roboto';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 10px;
-                line-height: 20px;
-                color: #FFFFFF;
-                @media screen and(max-width: $tablet){
-                    font-size: 2rem;
-                    line-height: 3.5rem;
-                    padding:0rem 1rem ;
-                }
-            }
-        }
-    }
-}
-
-// started
-.started{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 13rem;
+  padding-bottom: 5rem;
+  @media screen and(max-width: $mobile-s) {
     padding-top: 7rem;
-    padding-bottom: 5rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    .bg{
-        padding: 2rem 22rem 4rem;
-        border-radius: 1.9rem;
-        text-align: center;
-        background: linear-gradient(276.98deg, #8CD0D0 -15.83%, #8B8ADA 100%);
-        @media screen and(max-width: $mobile-s){
-          padding: 0 2rem;
-        }
-    h4{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.8rem;
-        line-height: 2.8rem;
-        padding-top: 3.2rem;
-        padding-bottom: 4rem;
-        @media screen and(max-width: $mobile-s){
-            font-size: 1.5rem;
-            padding-bottom: 2rem;
-        }
+  }
+  h4 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8cd0d0;
+    padding-bottom: 3rem;
+  }
+  h1 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 7rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    padding-bottom: 15rem;
+    @media screen and(max-width: $mobile-s) {
+      font-size: 4rem;
+      line-height: 7rem;
+      padding-bottom: 10rem;
     }
-    h2{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 6.7rem;
-        line-height: 7rem;
-        padding-bottom: 4rem;
-        @media screen and(max-width: $mobile-s){
-            font-size: 3.7rem;
-            line-height: 5rem;
-            padding-bottom: 2rem;
-        }
+  }
+  .card {
+    display: flex;
+    gap: 2rem;
+    @media screen and(max-width: $mobile-s) {
+      flex-direction: column;
+      gap: 10rem;
     }
-    button{
-        background-color: black;
-        color: #fff;
-        font-family: 'Outfit';
+    .one {
+      position: relative;
+      width: 30rem;
+      height: 22rem;
+      background: #0c0d32;
+      border-radius: 16px;
+      @media screen and(max-width: $tablet) {
+        height: 37rem;
+      }
+      @media screen and(max-width: $mobile-s) {
+        width: 30rem;
+      }
+      img {
+        position: absolute;
+        width: 15rem;
+        height: 13rem;
+        border-radius: 50%;
+        left: 7.5rem;
+        top: -6rem;
+        filter: grayscale(100%);
+      }
+      h4 {
+        font-family: "Outfit";
         font-style: normal;
         font-weight: 600;
         font-size: 2rem;
-        border-radius: 10rem;
-        padding: 1rem 10rem;
-        @media screen and(max-width: $mobile-s){
-            padding: 1rem 2rem;
-            margin-bottom: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding-top: 10rem;
+        padding-bottom: 1.3rem;
+      }
+      p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: #ffffff;
+        @media screen and(max-width: $tablet) {
+          font-size: 2rem;
+          line-height: 3.5rem;
+          padding: 0rem 1rem;
         }
+      }
     }
-   }
+    .two {
+      position: relative;
+      width: 30rem;
+      height: 22rem;
+      background: #0c0d32;
+      border-radius: 16px;
+      @media screen and(max-width: $tablet) {
+        height: 37rem;
+      }
+      img {
+        position: absolute;
+        width: 15rem;
+        height: 13rem;
+        border-radius: 50%;
+        left: 7.5rem;
+        top: -6rem;
+        filter: grayscale(100%);
+      }
+      h4 {
+        font-family: "Outfit";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding-top: 10rem;
+        padding-bottom: 1.3rem;
+      }
+      p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+        color: #ffffff;
+        @media screen and(max-width: $tablet) {
+          font-size: 2rem;
+          line-height: 3.5rem;
+          padding: 0rem 1rem;
+        }
+      }
+    }
+    .three {
+      position: relative;
+      width: 30rem;
+      background: #0c0d32;
+      border-radius: 16px;
+      img {
+        position: absolute;
+        width: 15rem;
+        height: 13rem;
+        border-radius: 50%;
+        left: 7.5rem;
+        top: -6rem;
+        filter: grayscale(100%);
+      }
+      h4 {
+        font-family: "Outfit";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding-top: 10rem;
+        padding-bottom: 1.3rem;
+      }
+      p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 20px;
+        color: #ffffff;
+        @media screen and(max-width: $tablet) {
+          font-size: 2rem;
+          line-height: 3.5rem;
+          padding: 0rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+// started
+.started {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  .bg {
+    padding: 2rem 22rem 4rem;
+    border-radius: 1.9rem;
+    text-align: center;
+    background: linear-gradient(276.98deg, #8cd0d0 -15.83%, #8b8ada 100%);
+    @media screen and(max-width: $mobile-s) {
+      padding: 0 2rem;
+    }
+    h4 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      padding-top: 3.2rem;
+      padding-bottom: 4rem;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+    h2 {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 6.7rem;
+      line-height: 7rem;
+      padding-bottom: 4rem;
+      @media screen and(max-width: $mobile-s) {
+        font-size: 3.7rem;
+        line-height: 5rem;
+        padding-bottom: 2rem;
+      }
+    }
+    button {
+      background-color: black;
+      color: #fff;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2rem;
+      border-radius: 10rem;
+      padding: 1rem 10rem;
+      @media screen and(max-width: $mobile-s) {
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
 }
 
 // footer
-.footer{
-    display: flex;
-    justify-content: center;
-    padding-top: 5rem;
-    gap: 10rem;
-    padding-bottom: 3rem;
-    @media screen and(max-width: $tablet){
-      gap: 6rem;
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  gap: 10rem;
+  padding-bottom: 3rem;
+  @media screen and(max-width: $tablet) {
+    gap: 6rem;
+  }
+  @media screen and(max-width: $mobile-s) {
+    flex-direction: column;
+    padding-left: 6rem;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+  h3 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    @media screen and(max-width: $mobile-s) {
+      display: none;
     }
-    @media screen and(max-width: $mobile-s){
-        flex-direction: column;
-        padding-left: 6rem;
-        gap: 2rem;
-        padding-top: 1rem;
+  }
+  a {
+    cursor: pointer;
+    line-height: 2rem;
+  }
+  h5 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+  }
+  h2 {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+  }
+  input {
+    padding: 1rem 4rem 1rem 1rem;
+    background-color: #0c0d32;
+    border-radius: 10rem;
+    border: #0c0d32;
+    @media screen and(max-width: $tablet) {
+      padding: 0.5rem;
     }
-    h3{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 2.2rem;
-        @media screen and(max-width: $mobile-s){
-            display: none;
-        }
+  }
+  button {
+    background-color: #8b8ada;
+    color: #fff;
+    padding: 0.7rem 2.3rem;
+    border-radius: 10rem;
+    margin-left: -3rem;
+    border: #8b8ada;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    @media screen and(max-width: $tablet) {
+      margin-left: -6rem;
     }
-    a{
-        cursor: pointer;
-        line-height: 2rem;
-    }
-    h5{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2rem;
-        padding-bottom: 1rem;
-       
-    }
-    h2{
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 2.2rem;
-        padding-bottom: 2rem;
-    }
-        input{
-            padding: 1rem 4rem 1rem 1rem;
-            background-color: #0C0D32;
-            border-radius: 10rem;
-            border: #0C0D32;
-            @media screen and(max-width: $tablet){
-                padding: .5rem;
-            }
-        }
-        button{
-            background-color: #8B8ADA;
-            color: #fff;
-            padding: .7rem 2.3rem;
-            border-radius: 10rem;
-            margin-left: -3rem;
-            border: #8B8ADA;
-            font-family: 'Outfit';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.6rem;
-            @media screen and(max-width: $tablet){
-                margin-left: -6rem;
-            }
-        }
-    }
-   
-
-
-    
-    
-
-
+  }
+}
